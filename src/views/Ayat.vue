@@ -1,9 +1,9 @@
 <template>
   <li style="text-decoration: none" v-for = "(item, index) in infoayat">
-    {{item.verse_key+ " (" + item.text_uthmani + ") - "}}
+    <h2>{{item.text_uthmani}}</h2>
     <p v-html= "infoarti[index].text"> </p>
   </li>
-  <hr>
+
 </template>
 
 <script>
@@ -44,4 +44,13 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  text-orientation: upright;
+  font-size: 30pt;
+  text-align: right;
+}
+
+p {
+  font-size: 15pt;
+}
 </style>

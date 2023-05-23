@@ -5,8 +5,7 @@
     <li v-for="item in listSurah">
       <h3>{{ item.id + '. ' + item.name_simple + ' | '}}
         {{item.verses_count + ' Ayat' }}</h3>
-
-      <router-link :to="{name: 'ayat', params: {id: item.id}}" class="Baca">Baca</router-link>
+      <router-link :to="{name: 'ayat', params: {id: item.id}}" class="Baca" style="text-decoration: none">Baca</router-link>
     </li>
 
   </div>
@@ -44,36 +43,10 @@ export default {
 </script>
 
 <style>
-
-
-
 li {
   list-style: none;
   padding-left: 20pt;
   padding-top: 20pt;
-}
-
-.title {
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 35pt;
-}
-
-.name_arabic {
-  float: right;
-  padding-right: 20pt;
-}
-
-.baca {
-  font-size: 15pt;
-  padding-left: 420pt;
-  -webkit-text-fill-color: black;
-  text-decoration: none;
-}
-
-.text-black {
   font-size: 15pt;
 }
-
 </style>
